@@ -104,7 +104,7 @@ const Navbar = () => {
                 ) : (
                     <>
                         <li className="link">
-                            <Link to="/Sign_Up">
+                            <Link to="/signup">
                                 <button className="btn1">Sign Up</button>
                             </Link>
                         </li>
