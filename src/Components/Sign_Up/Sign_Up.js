@@ -1,7 +1,7 @@
 // Following code has been commented with appropriate comments for your reference.
 import React, { useState } from 'react';
 import './Sign_Up.css'
-import {  useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 
 // Functional component for Sign Up form
@@ -66,6 +66,17 @@ const Sign_Up = () => {
     return (
         <div className="container" style={{marginTop:'5%'}}>
             <div className="signup-grid">
+            <div className="signup-text">
+
+            <h1>Sign Up</h1>
+
+             </div>
+
+                <div className="signup-text1" style={{ textAlign: 'left' }}>
+
+                Already a member? <span><Link to="/login" style={{ color: '#2190FF' }}> Login</Link></span>
+
+                </div>
                 <div className="signup-form">
                     <form method="POST" onSubmit={register}>
                         <div className="form-group">
@@ -89,7 +100,13 @@ const Sign_Up = () => {
                             <div className="err" style={{ color: 'red' }}>Password length must be 8 or more</div>
                             )}
                         </div>
-                        {/* Apply similar logic for other form elements like name, phone, and password to capture user information */}
+                        <div className="btn-group">
+
+                    <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
+
+                    <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
+
+                    </div>
                     </form>
                 </div>
             </div>
