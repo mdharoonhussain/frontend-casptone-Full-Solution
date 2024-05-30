@@ -9,7 +9,7 @@ import Signup from './Components/Sign_Up/Sign_Up'
 import InstantConsultation from './Components/Instant_Consultation/InstantConsultation'
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import BookingConsultation from './Components/BookingConsultation';
-//import Notification from './Components/Notification/Notification';
+import Notification from './Components/Notification/Notification';
 //import ReviewForm from './Components/ReviewForm/ReviewForm'
 //import ProfileCard from './Components/ProfileCard/ProfileCard';
 
@@ -19,7 +19,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
-             
+              <Notification>
                     <Navbar />
                     <Routes>
                         <Route path='/' element={<Landing_Page/>}/>
@@ -30,7 +30,7 @@ function App() {
                         <Route path='/search/doctors' element={<BookingConsultation />} />
 
                     </Routes>
-              
+                </Notification>
             </BrowserRouter>
 
         </div>
